@@ -20,22 +20,25 @@ public class ProductModel implements Serializable{
 	
 	private String name;
 	
+	private String description;
+	
 	private BigDecimal value;
 
 	public ProductModel() {
 		
 	}
 	
-	public ProductModel(UUID id, String name, BigDecimal value) {
-		super();
+	public ProductModel(UUID id, String name, BigDecimal value, String description) {
 		this.id = id;
 		this.name = name;
+		this.description = description;
 		this.value = value;
 	}
 
 	public ProductModel(ProductDto productDto) {
 		this.id = null;
 		this.name = productDto.name();
+		this.description = productDto.description();
 		this.value = productDto.value();
 	}
 	
@@ -53,6 +56,14 @@ public class ProductModel implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDesc() {
+		return description;
+	}
+
+	public void setDesc(String desc) {
+		this.description = desc;
 	}
 
 	public BigDecimal getValue() {

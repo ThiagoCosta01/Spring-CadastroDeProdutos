@@ -9,6 +9,8 @@ public record ProductDto(
 		
 		@NotBlank 
 		String name, 
+		@NotBlank
+		String description,
 		@NotNull 
 		BigDecimal value
 		

@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bb94df;
+    background-color: #121115;
 }
 
 .container {
@@ -35,6 +35,26 @@ body {
 
 .form-image img {
     width: 31rem;
+}
+
+.botao-voltar{
+    color: #ffffff;
+    white-space: nowrap;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(59, 6, 46);
+    padding: 0.4rem 1rem;
+    border-radius: 50px 1px 0px 1px;
+    cursor: pointer;
+    writing-mode: vertical-rl; 
+    
+    text-align: center;
+    display: inline-block;
+
+}
+
+.botao-voltar:hover{
+    background-color: rgb(87, 20, 57);
 }
 
 .form {
