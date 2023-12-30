@@ -1,15 +1,11 @@
 const url = "http://localhost:8080/product/fa246564-a4bc-43af-918e-3151a84753a1";
 
 
-
 function hideLoader(){
     document.getElementById("loading").style.display = "none";
     
 
 }
-
-
-
 
 async function getAPI(url) {
     try {
@@ -24,7 +20,7 @@ async function getAPI(url) {
         const data = await response.json();
         console.log(data);
         setTimeout(hideLoader, 1000);
-        document.getElementById("nomeProduto").innerHTML = data.name;
+        document.getElementById("nomeProdutoLabel").textContent = data.name;
 
         
     } catch (error) {
@@ -34,3 +30,5 @@ async function getAPI(url) {
 
 
 getAPI(url);
+
+
