@@ -37,7 +37,7 @@ public class ProductModel implements Serializable{
 
 	public ProductModel(ProductDto productDto) {
 		this.id = null;
-		this.name = productDto.name();
+		this.name = productDto.name().toUpperCase();
 		this.description = productDto.description();
 		this.value = productDto.value();
 	}

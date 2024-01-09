@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     
     const url = "http://localhost:8080/product";
-    const btn = document.querySelector("#botaoDeCadastro");
+    const btnCadastrar = document.querySelector("#botaoDeCadastro");
     const iproduto = document.getElementById('nomeProduto');
     const ivalor = document.querySelector('#valorProduto');
+    const iprodutos = document.getElementById("catalogoProdutos");
+    const btnListagem = document.getElementById('listagemB');
+    
 
 
 function hideLoader() {
@@ -24,6 +27,7 @@ async function getAPI(url) {
         console.log(data);
         setTimeout(hideLoader, 1000);
 
+
     } catch (error) {
         console.error("Erro ao obter dados da API:", error.message);
     }
@@ -33,7 +37,6 @@ function limpar() {
     document.getElementById('nomeProduto').value = "";
     document.getElementById('valorProduto').value = "";
     document.getElementById('descricaoProduto').value = "";
-
 }
 
 function cadastrar() {
@@ -55,24 +58,23 @@ function cadastrar() {
             alert(`Erro na requisição: ${response.status}`);
             throw new Error(`Erro na requisição: ${response.status}`);
         }
-        // Faça algo com a resposta se necessário
         
         
         console.log(response.ok);  // Isso retorna uma Promise também
     })
     .then(data => {
-        // Faça algo com os dados, se necessário
-
-        alert("data.name");
-        limpar();
-        console.log(data);
+          alert("Cadastro realizado!\nProduto: " + iproduto.value + "\nPreço: "+ivalor.value);
+          limpar();
+        
     })
     .catch(error => {
         console.error('Erro:', error);
     });
 }
 
+
 getAPI(url);
 
-btn.addEventListener("click", cadastrar);
+btnCadastrar.addEventListener("click", cadastrar);
+
 });

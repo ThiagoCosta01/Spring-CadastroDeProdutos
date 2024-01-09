@@ -30,6 +30,7 @@ body {
     align-items: center;
     padding: 1rem;
     color: aliceblue;
+    text-shadow: 2px 3px 1px black;
 }
 
 .main-botoes {
@@ -63,5 +64,8 @@ h1{
     font-size: 80px;
 }
 
-
+.contato{
+    position: absolute;
+    margin-top: 100px;
+}
 

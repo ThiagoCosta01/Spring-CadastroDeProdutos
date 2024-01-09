@@ -33,9 +33,7 @@ public class ProductController {
 		Optional<ProductModel> productO = productRepository.findById(id);
 		
 		return ResponseEntity.status(HttpStatus.OK).body(productO);
-		
 	}
-	
 	
 	@PostMapping
 	@Transactional

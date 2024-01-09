@@ -22,6 +22,7 @@ body {
     height: 80vh;
     display: flex;
 
+
 }
 
 .form-image {
@@ -65,12 +66,14 @@ body {
     flex-direction: column; 
     background-color: rgb(240, 240, 240);
     padding: 3rem;
+    
 }
 
 .form-header{
     margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
+    
 
 
 }
